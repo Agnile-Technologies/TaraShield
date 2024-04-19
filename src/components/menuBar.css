@@ -1,0 +1,41 @@
+.menuBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff; /* Professional blue color scheme */
+  color: white;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.menuBar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menuBar ul li {
+  margin-right: 20px;
+}
+
+.menuBar ul li:last-child {
+  margin-right: 0;
+}
+
+.menuBar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-size: 1.10rem; /* Increased font size for better readability */
+}
+
+.menuBar ul li a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.menuBar .logo {
+  height: 50px; /* Adjusted to specific height */
+  width: auto;
+}

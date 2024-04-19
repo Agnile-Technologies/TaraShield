@@ -1,0 +1,76 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8f9fa; /* Updated to a more subtle shade for a professional look */
+  padding: 30px; /* Increased padding for better spacing */
+  border-radius: 10px; /* Softened the look with a larger border radius */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  z-index: 2001; /* Ensure modal is above the overlay content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px; /* Increased max width for better layout on larger screens */
+  width: 90%; /* Adjusted width for better responsiveness */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Changed font for a more professional appearance */
+}
+
+.modal input, .modal textarea, .modal button {
+  margin-top: 15px; /* Increased spacing for a cleaner layout */
+  padding: 15px; /* Increased padding for better usability */
+  width: 100%; /* Adjusted width for better form alignment */
+  box-sizing: border-box;
+  border: 1px solid #ced4da; /* Added border to inputs for definition */
+  border-radius: 5px; /* Rounded corners for inputs and buttons */
+}
+
+.modal button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold; /* Made button text bold for emphasis */
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+.directory-selection {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Adjusted width for better alignment with other form elements */
+}
+
+.directory-selection input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.directory-selection button {
+  white-space: nowrap;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 2000; /* Ensure overlay is below the modal but above other content */
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 20px; /* Reduced padding on smaller screens */
+    font-size: 14px; /* Adjusted font size for better readability */
+  }
+
+  .modal input, .modal textarea, .modal button {
+    margin-top: 10px; /* Adjusted spacing for a compact layout */
+    padding: 10px; /* Reduced padding for consistency */
+  }
+}

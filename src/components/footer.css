@@ -1,0 +1,9 @@
+footer {
+  width: 100%;
+  background-color: #f8f9fa; /* Changed footer color to light grey for an elegant look */
+  color: black; /* Changed text color for better contrast with the new footer background */
+  text-align: center;
+  padding: 10px 0; /* Reduced padding to fit the text snugly */
+  margin-top: auto;
+  border-top: 2px solid #e2e3e5; /* Subtle top border in a darker shade of grey to define boundary */
+}

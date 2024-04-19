@@ -1,0 +1,156 @@
+.welcomePage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* Disable vertical and horizontal scroll */
+}
+
+.menuBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff; /* Professional blue color scheme */
+  color: white;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.menuBar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menuBar ul li {
+  margin-right: 20px;
+}
+
+.menuBar ul li:last-child {
+  margin-right: 0;
+}
+
+.menuBar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.menuBar ul li a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.menuBar .logo {
+  height: 50px; /* Adjusted to specific height */
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+footer {
+  width: 100%;
+  background-color: #007bff; /* Updated footer color to match menu bar for a cohesive look */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed; /* Ensure footer is always visible at the bottom */
+  bottom: 0;
+  z-index: 1000; /* Ensure footer stays above other content */
+}
+
+/* Centering main content and styling buttons */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding-top: 60px; /* Add padding to account for fixed menu bar */
+  padding-bottom: 60px; /* Add padding to account for fixed footer */
+}
+
+.action-buttons button {
+  background-color: #0056b3; /* Professional button color */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners for buttons */
+  padding: 10px 20px;
+  margin: 10px; /* Space between buttons */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.action-buttons button:hover {
+  background-color: #003d7a; /* Darker shade on hover for buttons */
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0; /* Changed to a light grey to stand out from the white background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2000; /* Ensure modal is above other content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.modal input, .modal textarea, .modal button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 90%;
+  box-sizing: border-box; /* Ensure padding does not affect overall width */
+}
+
+.modal button {
+  background-color: #007bff; /* Match button color with menu bar for consistency */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+.directory-selection {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.directory-selection input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.directory-selection button {
+  white-space: nowrap; /* Prevent text wrapping on small screens */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1500; /* Ensure overlay is below the modal but above other content */
+}
