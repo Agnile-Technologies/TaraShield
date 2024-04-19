@@ -1,0 +1,37 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #2C3E50; /* Darker color for a more professional look */
+    color: #ECF0F1; /* Lighter text color for contrast */
+    gap: 5px;
+    align-items: center;
+}
+
+.toolbar button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #34495E; /* Slightly lighter color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.toolbar button:hover {
+    background-color: #4A6278; /* Lighter color on hover for feedback */
+}
+
+.toolbar .navigationButtons, .toolbar .actionButtons {
+    display: flex;
+}
+
+.navigationButton, .actionButton {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}

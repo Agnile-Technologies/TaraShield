@@ -23,6 +23,12 @@
   box-sizing: border-box;
   border: 1px solid #ced4da; /* Added border to inputs for definition */
   border-radius: 5px; /* Rounded corners for inputs and buttons */
+  /* Indicate required fields */
+  background-color: #fff; /* Ensure background is white for visibility */
+}
+
+.modal input:required, .modal textarea:required {
+  border-color: #dc3545; /* Highlight required fields with a red border */
 }
 
 .modal button {
@@ -73,4 +79,10 @@
     margin-top: 10px; /* Adjusted spacing for a compact layout */
     padding: 10px; /* Reduced padding for consistency */
   }
+}
+
+.validation-error {
+  color: #dc3545; /* Error message color */
+  margin-top: 10px; /* Spacing above the error message */
+  text-align: center; /* Center-align the error message */
 }

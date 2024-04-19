@@ -1,0 +1,39 @@
+.sidebar {
+    width: 160px; /* Adjusted width to snugly fit the larger text */
+    background: #2C3E50; /* Darker color for a more professional look */
+    padding: 10px; /* Increased padding for better spacing */
+    color: #ECF0F1; /* Lighter text color for contrast */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Added to remove default margin */
+}
+
+.sidebar ul li {
+    margin-bottom: 10px; /* Added space between list items */
+}
+
+.sidebar ul li:last-child {
+    margin-bottom: 0; /* Remove margin from the last item */
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px; /* Increased padding for a larger click area */
+    color: inherit; /* Use the same color as the sidebar for consistency */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 16px; /* Increased font size for better readability */
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495E; /* Slightly lighter color on hover for feedback */
+}
+
+.sidebar ul li a img {
+    margin-right: 8px; /* Added space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+}

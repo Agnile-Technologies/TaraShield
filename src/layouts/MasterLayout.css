@@ -1,0 +1,28 @@
+.masterLayout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Disable scrolling for the entire Master Layout */
+}
+
+.contentArea {
+    display: flex;
+    flex-grow: 1;
+    padding-top: 0; /* Removed padding to eliminate space between the toolbar and the side navigation bar */
+}
+
+.mainContent {
+    flex-grow: 1;
+    padding: 20px;
+    overflow: auto; /* Enable scrolling within each page container, but not the whole Master Layout */
+    display: flex;
+    flex-direction: column;
+}
+
+.pageTitle {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the title stand out */
+    margin-bottom: 20px; /* Ensure there's space between the title and the content below */
+}

@@ -1,0 +1,33 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #2C3E50; /* Changed to match the side navigation bar color */
+  color: white;
+  margin-top: 0; /* Removed gap between the toolbar and the menu bar */
+}
+
+.toolbar button {
+  background-color: transparent; /* Changed for a cleaner look */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.toolbar button:hover {
+  background-color: #003d7a;
+}
+
+.toolbar .search-input {
+  display: none; /* Hide the search input as it's not part of the toolbar enhancements */
+}
+
+.toolbar .logo-small {
+  display: none; /* Hide the small logo as it's not part of the toolbar enhancements */
+}

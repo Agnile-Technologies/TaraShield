@@ -1,0 +1,80 @@
+.editor {
+  padding: 0;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: calc(100vh - 50px - 40px); /* Adjusted to account for toolbar and title height */
+}
+
+.ql-toolbar {
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
+}
+
+.ql-container {
+  border-radius: 0 0 4px 4px;
+  border-top: none;
+  width: 100%;
+  height: calc(100% - 42px); /* Adjust height to account for toolbar height */
+}
+
+.ql-editor {
+  width: 100%;
+  height: 100%;
+}
+
+.ql-editor.ql-blank::before {
+  left: 15px;
+}
+
+.insertImageButton {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #2C3E50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.insertImageButton:hover {
+  background-color: #4A6278;
+}
+
+/* Custom toolbar options for inserting pictures and attachments */
+.ql-custom {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #2C3E50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ql-custom:hover {
+  background-color: #4A6278;
+}
+
+/* Additional styles for new rich text editor toolbar options */
+.insertAttachmentButton {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #2C3E50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.insertAttachmentButton:hover {
+  background-color: #4A6278;
+}
