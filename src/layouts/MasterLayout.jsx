@@ -50,6 +50,9 @@ export default function MasterLayout() {
                     <Outlet />
                 </main>
             </div>
+            <footer className="footer">
+                <p>Copyright © TaraShield 2023</p>
+            </footer>
         </div>
     );
 }

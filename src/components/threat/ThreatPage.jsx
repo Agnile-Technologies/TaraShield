@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addThreat, editThreat, deleteThreat } from '../../store/threatActions';
+import { addThreat, editThreat, deleteThreat } from '../../store/threatActions'; // Corrected import to threat-specific actions
 import './ThreatPage.css';
 
 const ThreatPage = () => {
   const [threat, setThreat] = useState({ name: '', description: '', associatedAssets: '' });
   const [editId, setEditId] = useState(null);
   const dispatch = useDispatch();
-  const threats = useSelector((state) => state.threats.threats);
+  // Corrected to use the correct state structure based on rootReducer configuration
+  const threats = useSelector((state) => state.threats.threats); // Corrected to access the threats array within the threats state slice
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,10 +17,6 @@ const ThreatPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!threat.name.trim() || !threat.description.trim() || !threat.associatedAssets.trim()) {
-      alert("Name, description, and associated assets are required.");
-      return;
-    }
     if (editId) {
       dispatch(editThreat(editId, threat)); // Corrected to use threat-specific action
       console.log('Threat updated:', threat);
@@ -44,12 +41,12 @@ const ThreatPage = () => {
 
   return (
     <div className="threat-page">
-      <h1>Threat Management</h1>
-      <form onSubmit={handleSubmit} className="threat-form">
-        <input type="text" name="name" value={threat.name} onChange={handleChange} placeholder="Threat Name" className="form-input" />
-        <textarea name="description" value={threat.description} onChange={handleChange} placeholder="Description" className="form-input"></textarea>
-        <input type="text" name="associatedAssets" value={threat.associatedAssets} onChange={handleChange} placeholder="Associated Assets" className="form-input" />
-        <button type="submit" className="button-submit">{editId ? 'Update Threat' : 'Add Threat'}</button>
+      <h2>Threat Management</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="name" value={threat.name} onChange={handleChange} placeholder="Threat Name" />
+        <textarea name="description" value={threat.description} onChange={handleChange} placeholder="Description"></textarea>
+        <input type="text" name="associatedAssets" value={threat.associatedAssets} onChange={handleChange} placeholder="Associated Assets" />
+        <button type="submit">{editId ? 'Update Threat' : 'Add Threat'}</button>
       </form>
       <div className="threat-list">
         {threats.map((t) => (
@@ -57,8 +54,8 @@ const ThreatPage = () => {
             <h3>{t.name}</h3>
             <p>{t.description}</p>
             <p>Associated Assets: {t.associatedAssets}</p>
-            <button onClick={() => handleEdit(t.id)} className="button-edit">Edit</button>
-            <button onClick={() => handleDelete(t.id)} className="button-delete">Delete</button>
+            <button onClick={() => handleEdit(t.id)}>Edit</button>
+            <button onClick={() => handleDelete(t.id)}>Delete</button>
           </div>
         ))}
       </div>

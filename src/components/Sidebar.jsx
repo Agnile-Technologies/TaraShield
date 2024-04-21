@@ -21,7 +21,26 @@ export default function Sidebar() {
                         Damage Scenarios
                     </Link>
                 </li>
-                {/* Additional links for new sections can be added here following the same pattern */}
+                <li>
+                    <Link to="/dashboard/risk-assessment">
+                        Risk Assessment
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/dashboard/security-goals">
+                        Security Goals
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/dashboard/attack-tree">
+                        Attack Tree
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/dashboard/management-summary">
+                        Management Summary
+                    </Link>
+                </li>
             </ul>
         </aside>
     );

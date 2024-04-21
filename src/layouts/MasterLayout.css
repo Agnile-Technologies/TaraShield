@@ -9,6 +9,7 @@
     display: flex;
     flex-grow: 1;
     padding-top: 0; /* Removed padding to eliminate space between the toolbar and the side navigation bar */
+    margin-bottom: 30px; /* Added margin to accommodate the footer height */
 }
 
 .mainContent {
@@ -25,4 +26,6 @@
     font-size: 24px; /* Adjust font size as needed */
     font-weight: bold; /* Make the title stand out */
     margin-bottom: 20px; /* Ensure there's space between the title and the content below */
+    width: 100%; /* Ensure the title spans the full width */
+    align-self: center; /* Center the title within the content area */
 }

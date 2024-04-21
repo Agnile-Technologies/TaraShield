@@ -1,8 +1,9 @@
 .sidebar {
-    width: 160px; /* Adjusted width to snugly fit the larger text */
+    width: 120px; /* Reduced width to just enough to fit the text */
     background: #2C3E50; /* Darker color for a more professional look */
     padding: 10px; /* Increased padding for better spacing */
     color: #ECF0F1; /* Lighter text color for contrast */
+    font-size: 18px; /* Increased font size for better readability */
 }
 
 .sidebar ul {
@@ -34,6 +35,5 @@
 }
 
 .sidebar ul li a img {
-    margin-right: 8px; /* Added space between icon and text */
-    vertical-align: middle; /* Align icon with text */
+    display: none; /* Icons removed from sidebar navigation */
 }

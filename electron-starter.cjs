@@ -2,19 +2,13 @@ const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const fs = require('fs-extra');
 const path = require('path');
 
-async function isDevMode() {
-  try {
-    const isDev = await import('electron-is-dev');
-    return isDev.default;
-  } catch (error) {
-    console.error("Error determining development mode:", error.message);
-    return false;
-  }
+async function isDev() {
+  const electronIsDev = await import('electron-is-dev');
+  return electronIsDev.default;
 }
 
 async function createWindow() {
-  const isDev = await isDevMode();
-
+  const devMode = await isDev();
   const win = new BrowserWindow({
     width: 800,
     height: 600,
@@ -35,7 +29,7 @@ async function createWindow() {
 
   try {
     await win.loadURL(
-      isDev
+      devMode
         ? 'http://localhost:5173'
         : `file://${path.join(__dirname, './dist/index.html')}`
     );
@@ -43,7 +37,7 @@ async function createWindow() {
     console.error("Error loading URL:", error.message);
   }
 
-  if (isDev) {
+  if (devMode) {
     win.webContents.openDevTools();
   }
 }

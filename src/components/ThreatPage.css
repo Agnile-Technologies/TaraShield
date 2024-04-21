@@ -1,3 +1,9 @@
+/* Basic styling for the Threat Page */
+.threat-page {
+  padding: 20px;
+}
+
+/* Styling for the table that lists threats */
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -18,6 +24,7 @@
   background-color: #f9f9f9;
 }
 
+/* Styling for form inputs within the table for adding or editing threats */
 .form-input, .form-select {
   width: 90%; /* Adjusted width to fit within table cells */
   padding: 8px;
@@ -28,6 +35,7 @@
   box-sizing: border-box;
 }
 
+/* Styling for buttons within the table */
 .button {
   background-color: #4CAF50; /* Green */
   color: white;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ToolbarButton from './ToolbarButton'; // Import ToolbarButton component
-import { faArrowLeft, faArrowRight, faFile, faFolderOpen, faSave, faTimes, faUndo, faRedo, faCut, faCopy, faPaste, faTrash, faSearchPlus, faSearchMinus, faSearch, faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowRight, faFile, faFolderOpen, faSave, faTimes, faUndo, faRedo, faCut, faCopy, faPaste, faTrash, faSearchPlus, faSearchMinus, faSearch, faExchangeAlt } from '@fortawesome/free-solid-svg-icons'; // Using solid icons for better visibility
 import './Toolbar.css';
 
 const Toolbar = () => {
@@ -19,6 +19,7 @@ const Toolbar = () => {
         <div className="toolbar">
             <ToolbarButton icon={faArrowLeft} tooltipText="Back" onClick={handleNavigateBack} />
             <ToolbarButton icon={faArrowRight} tooltipText="Forward" onClick={handleNavigateForward} />
+            <div className="divider">|</div>
             <ToolbarButton icon={faFile} tooltipText="New" onClick={() => {}} />
             <ToolbarButton icon={faFolderOpen} tooltipText="Open" onClick={() => {}} />
             <ToolbarButton icon={faSave} tooltipText="Save" onClick={() => {}} />
